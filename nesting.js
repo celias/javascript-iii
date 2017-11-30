@@ -36,8 +36,24 @@ var employees = [{
 //  2. If the employee's first name is Lorie, change her department to 'HR'.
 //  3. Return the updated employee array.
 
-// Code here
+function employeeUpdater () {
+  for (var i = 0; i < employees.length; i++) {
 
+    if (employees[i].firstName === "Theo") {
+      employees.splice(i, 1);
+  // if true - remove that employee because he's fired 
+  // if false - continue with the nested checks
+
+} else {
+    if (employees[i].firstName === "Lorie") {
+      employees[i].department = "HR";
+      // if true - change her department to HR
+      // if false - continue ...
+  }
+  }
+} 
+  return employees;
+}
 
 
 
@@ -54,9 +70,18 @@ var employees = [{
 
 var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
-// Code here
+function removeDuplicates () {
+  for (var i = 0; i < workplaceAccidents.length; i++) {
+    for (var j = i+1; j < workplaceAccidents.length; j++ ) { //i+1 is comparing numbers next to eachother in                                                           //the array IE 12=56? no, 12=44? no, etc
+      if (workplaceAccidents[i] == workplaceAccidents[j]) {
+        workplaceAccidents.splice(i, 1); //splice?
+        
+      }
+    }
+  }
 
-
+return workplaceAccidents;
+}
 
 
 
