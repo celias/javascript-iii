@@ -13,6 +13,9 @@ var carDetails = {
 
 // CODE HERE
 
+const { color, make, model, year } = carDetails;
+
+
 
 // ========================
 
@@ -20,8 +23,9 @@ var carDetails = {
 // In the function below named greeting, it is receiving an object as a parameter. Use object destructuring to save the object properties to new variables. The property names are firstName, lastName, and title. Return the concatenated string.
 
 function greeting( obj ) {
-  // CODE HERE
-  
+   
+  const { title, firstName, lastName } = obj;
+
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
 }
 
@@ -31,16 +35,22 @@ function greeting( obj ) {
 
 // Write a function called totalPopulation that will take in an object. That object will have 4 properties named utah, california, texas and arizona. The property values will be numbers. Use object destructuring to save the property values to new variables. Sum up the values and return the total number.
 
-  // CODE HERE
-
+let totalPopulation = (obj) => {
+const { utah, california, texas, arizona } = obj;
+  return utah + california + texas + arizona;
+}
 
 // ========================
 
 
-// Write a function called ingredients that will take in an object. This object will have 3 properties named carb, fat, and protein. The property values will be strings. Use object destructuring to save the property values to new variables. Push these new variables to an array and return the array. 
+// Write a function  incalledgredients that will take in an object. This object will have 3 properties named carb, fat, and protein. The property values will be strings. Use object destructuring to save the property values to new variables. Push these new variables to an array and return the array. 
 
   // CODE HERE
-
+let ingredients = (obj) => { 
+  const { carb, fat, protein } = obj;
+  let arr = [];
+  return [...carb, ...fat, ...protein];
+} 
 
 // ========================
 
