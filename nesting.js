@@ -38,6 +38,12 @@ var employees = [{
 
 // Code here
 
+let employeeUpdater = () => {
+  for(var i = 0; i < employees.length; i++) {
+    
+  }
+}
+
 
 
 
