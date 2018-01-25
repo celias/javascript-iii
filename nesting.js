@@ -38,10 +38,23 @@ var employees = [{
 
 // Code here
 
-let employeeUpdater = () => {
-  for(var i = 0; i < employees.length; i++) {
-    
+function employeeUpdater () {
+  for (var i = 0; i < employees.length; i++) {
+
+    if (employees[i].firstName === "Theo") {
+      employees.splice(i, 1);
+  // if true - remove that employee because he's fired 
+  // if false - continue with the nested checks
+
+} else {
+    if (employees[i].firstName === "Lorie") {
+      employees[i].department = "HR";
+      // if true - change her department to HR
+      // if false - continue ...
   }
+  }
+} 
+  return employees;
 }
 
 

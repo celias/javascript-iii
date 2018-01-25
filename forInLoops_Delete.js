@@ -7,13 +7,13 @@
 
 // In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
 // for(var key in values) {
 //   console.log(values[key])
@@ -31,19 +31,31 @@
 
 // Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 
-function showValues( obj ) {
-  // CODE HERE
+function showValues( values ) {
+  let betterString = '';
+  for(var key in values){
+  betterString+=(values[key]);
+  console.log(betterString);
+  }
+    return betterString;
 }
 
 
 // ========================
 
 
-// Write a function called greaterThan10 that takes in an object. Write a for in loop that loops over the object and changes any value that is great than 10 to 0. Return the updated object.
+// Write a function called greaterThan10 that takes in an object. Write a for in loop that loops over the object and changes any value that is greater than 10 to 0. Return the updated object.
 
 // CODE HERE
-
-
+let greaterThan10 = (obj) => {
+  
+  for(var key in obj){
+    if(obj[key] > 10) {
+      obj[key] = 0;
+    }
+  }
+  return obj;
+}
 
 // ========================
 
@@ -51,6 +63,13 @@ function showValues( obj ) {
 // Write a function called double that takes in an object. Write a for in loop that loops over the object and changes every value to be itself multipled by 2. Return the updated object.
 
 // CODE HERE
+let double = (obj) => {
+  for(var key in obj){
+      obj[key]*=2;
+    }
+    return obj;
+  }
+
 
 
 
@@ -60,6 +79,14 @@ function showValues( obj ) {
 // Write a function called secrets that will take in an object. Create an empty string variable. Write a for in loop that loops over the object. If the property name starts with an 'sh', concatenate the value to the string variable. By the end of the for in loop, you should have a sentence, return that sentence.
 
 // CODE HERE
+let secrets = (obj) => {
+  emptyStr = '';
+  for(var key in obj){
+    if(emptyStr.startsWith('sh', i)){
+      emptyStr.concat(obj)    
+  }
+  return emptyStr;
+}
 
 
 // ========================
